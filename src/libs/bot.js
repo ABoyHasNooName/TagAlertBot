@@ -8,7 +8,7 @@ const af = new AntiFlood()
 const TelegramBot = require('node-telegram-bot-api')
 const memoize = require('memoizee')
 const db = require('./database.js')
-const bot = new TelegramBot(config.token, {webhook: true})
+const bot = new TelegramBot(config.token, {polling: true})
 // Send a message to the admin when bot starts
 require('./ascii.js')()
 bot.getMe().then((me) => {
